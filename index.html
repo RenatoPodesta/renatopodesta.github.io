@@ -21,19 +21,24 @@
         }
 
         /* Estilizando o cabeçalho */
-        header {
+        body {
             background-color: #1273b4; /* Cor de fundo do cabeçalho */
             color: #fff; /* Cor do texto */
-            padding: 20px 0; /* Espaçamento interno */
+            /*padding: 20px 0; /* Espaçamento interno */
             text-align: center; /* Centralizar conteúdo */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Mínimo de altura da tela */
         }
 
         .container {
             max-width: 1260px; /* Largura máxima para o conteúdo */
             margin: 0 auto; /* Centralizar o conteúdo */
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
+            flex-grow: 1; /* Ocupa o espaço disponível */
         }
 
         nav ul {
@@ -43,16 +48,17 @@
 
         nav ul li {
             display: inline-block;
-            margin-right: 20px;
+            margin: 5%;
+            margin-top: 0%;
         }
 
         nav ul li a {
-            color: #fff; /* Cor dos links no cabeçalho */
+            color: #fafafa; /* Cor dos links no cabeçalho */
             text-decoration: none;
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            color: #ecfaff;
         }
 
         /* Estilizando o conteúdo principal */
@@ -67,6 +73,7 @@
             color: #fff; /* Cor do texto */
             text-align: center;
             padding: 10px 0; /* Espaçamento interno */
+            flex-shrink: 0; /* Não reduzir o tamanho do rodapé */
         }
         
         /* Estilo para o logo */
@@ -74,11 +81,18 @@
             max-width: 100%;
             height: auto;
         }
+
+        /* Media Query para telas menores */
+        @media screen and (max-width: 768px) {
+            nav ul li {
+                margin: 2%; /* Reduzir a margem entre os links */
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="d-flex justify-content-center">
             <img src="img/BannerItch.io.png" alt="Logo">
             <nav>
                 <ul>
@@ -90,11 +104,11 @@
             </nav>
         </div>
     </header>
-    <section class="main-content">
-        <!-- Seu conteúdo principal aqui -->
-    </section>
+    <!-- <section class="main-content">
+        <!-- Seu conteúdo principal aqui
+    </section> -->
     <footer>
-        <p>&copy; 2024 Renato Podestá</p>
+        <p>&copy; 2024 Renato Podesta</p>
     </footer>
 </body>
 </html>
