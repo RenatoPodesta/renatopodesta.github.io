@@ -69,13 +69,16 @@
         }
 
         /* Estilizando o rodapé */
-        footer {
+        .principal {
             background-color: #008bc0; /* Cor de fundo do rodapé */
             color: #fff; /* Cor do texto */
             font-size: 16pt;
             text-align: center;
             padding: 10px 0; /* Espaçamento interno */
             flex-shrink: 0; /* Não reduzir o tamanho do rodapé */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
         
         /* Estilo para o logo */
@@ -113,7 +116,7 @@
     <!-- <section class="main-content">
         <!-- Seu conteúdo principal aqui
     </section> -->
-    <footer>
+    <footer class="principal">
         <p>&copy; 2024 Renato Podesta</p>
     </footer>
 </body>
